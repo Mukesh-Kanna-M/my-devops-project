@@ -1,4 +1,4 @@
-name: My First Workflow
+name: Docker Build 
 
 on: [push]
 
@@ -7,5 +7,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Print Hello
-        run: echo "Hello Have A Blissfull Day"
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name:Build Docker Image 
+        run: docker build -t my-app .  
+

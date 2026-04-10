@@ -21,5 +21,5 @@ jobs:
         run: docker push ${{ secrets.DOCKER_USERNAME }}/my-app
        
       - name: Deploy to Kubernetes
-              run: |
-                echo "Simulating deployment"
+        run: |
+          echo "Simulating deployment"
